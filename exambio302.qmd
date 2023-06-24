@@ -19,9 +19,10 @@ editor: visual
 library(here)
 library(tidyverse)
 library(dplyr)
+library(usethis) #package for using git
 here::here()
 usethis::use_git()
-
+use_github() #creating repository
 ```
 
 2.  Discuss how well you managed to reproduce the part of paper you were working on and what challenges you faced. If you looked at two papers discuss both.

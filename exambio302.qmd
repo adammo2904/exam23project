@@ -7,10 +7,17 @@ editor: visual
 
 ## Part A - reproducibility
 
+## Original paper and data source
+
+I have chosen to look at this paper:
+
+\- Knutsen, H., Jorde, P.E., Hutchings, J.A., Hemmer‐Hansen, J., Grønkjær, P., Jørgensen, K.E.M., André, C., Sodeland, M., Albretsen, J. and Olsen, E.M., 2018. Stable coexistence of genetically divergent Atlantic cod ecotypes at multiple spatial scales. *Evolutionary Applications*, *11*(9), pp.1527-1539.
+
+And the data is available from the Dryad Digital Repository: [**https://doi.org/10.5061/dryad.hm249b5**](https://doi.org/10.5061/dryad.hm249b5).
+
 1.  Continue with your attempt to reproduce part of a paper from archived data from the first practical. Archive the code and text on GitHub and include the link to your repo in your answer here.
 
 -   Make at least two commits to git.
--   Cite the original paper and data.
 -   Make your reproduction as reproducible as possible (i.e. it should be possible for me to reproduce your work after cloning your repo and downloading the data).
 
 ```{r}

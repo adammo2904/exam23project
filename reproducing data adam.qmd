@@ -1,0 +1,72 @@
+---
+title: "Reproducable data"
+format: html
+editor: visual
+---
+
+## Reproducible coding tutorial
+
+Assignment:
+
+Find an interesting dataset on DataDryad.org (or another data repository) and download it. Make an RStudio project to reproduce one or more of the figures in the paper associated with the dataset, making your analysis as reproducible as possible by using (at least):
+
+-   git and GitHub
+
+-   renv for package management
+
+-   Best practice for comments and code style
+
+-   "here" package for helping load data
+
+-   quarto for the document (reference the data source and the original paper)
+
+When you are done, push the whole project to GitHub.
+
+Loading packages:
+
+```{r}
+library(here)
+library(tidyverse)
+library(dplyr)
+library(adegenet) #read.genepop package
+here::here()
+```
+
+Reading the data:
+
+```{r}
+#| warning: false
+data <- read_delim(here("reprod_data", "data.csv")) |>
+  janitor::clean_names() |>  #non capital column names
+  count(year,origin) |> 
+filter(origin != 0) |> 
+  drop_na(year)
+
+
+ select(origin == c("1","2"))
+```
+
+Figuring out which origin is North Sea, and which one is fjord:
+
+```{r}
+F_or_NS <- data |>
+  select(c("year", "origin"))
+  filter(year=="2000")
+  
+print(F_or_NS)
+sum(F_or_NS)
+F_or_NS |> count(year,origin)
+```
+
+```{r}
+plot1 <- ggplot(data = data, aes(x = year, y = n, colour = factor(origin))) +
+  geom_line() +
+  theme_bw()
+plot1
+```
+
+## Data source and original paper
+
+Paper: Knutsen, H., Jorde, P.E., Hutchings, J.A., Hemmer‐Hansen, J., Grønkjær, P., Jørgensen, K.E.M., André, C., Sodeland, M., Albretsen, J. and Olsen, E.M., 2018. Stable coexistence of genetically divergent Atlantic cod ecotypes at multiple spatial scales. *Evolutionary Applications*, *11*(9), pp.1527-1539.
+
+Data: Data available from the Dryad Digital Repository: [**https://doi.org/10.5061/dryad.hm249b5**](https://doi.org/10.5061/dryad.hm249b5).

@@ -1,0 +1,35 @@
+---
+title: "Exam BIO302"
+author: "Adam Haugen Mortensen"
+format: html
+editor: visual
+---
+
+## Part A - reproducibility
+
+1.  Continue with your attempt to reproduce part of a paper from archived data from the first practical. Archive the code and text on GitHub and include the link to your repo in your answer here.
+
+-   Make at least two commits to git.
+-   Cite the original paper and data.
+-   Make your reproduction as reproducible as possible (i.e. it should be possible for me to reproduce your work after cloning your repo and downloading the data).
+
+```{r}
+#| warning: false
+```
+
+2.  Discuss how well you managed to reproduce the part of paper you were working on and what challenges you faced. If you looked at two papers discuss both.
+
+3.  Discuss what how well the original paper meets best practice for reproducibility, i.e. what should the authors have done to make their analysis more reproducible, and what they did well.
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).

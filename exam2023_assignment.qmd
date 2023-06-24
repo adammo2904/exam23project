@@ -1,0 +1,55 @@
+---
+title: "Bio302 Home Exam 2023"
+format: html
+editor: visual
+---
+
+## 
+
+## Part A - reproducibility
+
+1.  Continue with your attempt to reproduce part of a paper from archived data from the first practical. Archive the code and text on GitHub and include the link to your repo in your answer here.
+
+-   Make at least two commits to git.
+-   Cite the original paper and data.
+-   Make your reproduction as reproducible as possible (i.e. it should be possible for me to reproduce your work after cloning your repo and downloading the data).
+
+2.  Discuss how well you managed to reproduce the part of paper you were working on and what challenges you faced. If you looked at two papers discuss both.
+
+3.  Discuss what how well the original paper meets best practice for reproducibility, i.e. what should the authors have done to make their analysis more reproducible, and what they did well.
+
+## Part B data analysis
+
+1.  A colleague is testing the effect of a treatment on fish growth. They have ten tanks (five for each treatment). Each tank with ten fish. They plan to fit the model
+
+lm(growth \~ treatment, data = fish_data)
+
+-   What is wrong with this plan?
+-   Show, by simulation, the problems with this model for these data.
+-   Suggest a better model and show that it performs better.
+
+2.  You review a paper with the following text.
+
+> "The effect size was small (r = 0.124). However artificially amplifying the sample by a factor of two (from n = 54 to n = 108) yielded a significant result (p = 0.043) suggesting that a future larger study might be able to detect a positive benefit for \[our treatment\]."
+
+What advice do you give the authors?
+
+3.  The `lynx` data (available with-in R) show the number of lynx (norsk: gaupe) trapped in Canada in 1821-1934. Plot the data then examine the acf and pacf for these data. What can you infer from these about the type of autocorrelation in these data?
+
+4.  Chironomid species richness has been recorded in some Norwegian lakes. Three predictor variables are available, water temperature, depth and pH. We want to test the hypothesis that species richness is related to temperature.
+
+The data are in the file chironomid.txt.
+
+-   What distribution could be assumed for the response variable?
+-   What type of analysis is appropriate?\
+-   Fit an appropriate parametric model to test the hypothesis.
+-   Check the model diagnostics. Justify any changes you need to make to the model.
+-   Predict species richness at -5, 5, and 30°C and show the 95% confidence intervals.\
+-   Present the results using both graphs and tables.\
+-   Write a biological interpretation of your model.
+
+## Instructions
+
+Write in a quarto document and submit the rendered version. Make sure that any figures are included in you submission.
+
+Upload your answer to mitt.uib

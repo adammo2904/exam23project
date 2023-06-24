@@ -14,7 +14,14 @@ editor: visual
 -   Make your reproduction as reproducible as possible (i.e. it should be possible for me to reproduce your work after cloning your repo and downloading the data).
 
 ```{r}
+# Loading packages and setting up git
 #| warning: false
+library(here)
+library(tidyverse)
+library(dplyr)
+here::here()
+usethis::use_git()
+
 ```
 
 2.  Discuss how well you managed to reproduce the part of paper you were working on and what challenges you faced. If you looked at two papers discuss both.
